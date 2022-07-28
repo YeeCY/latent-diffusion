@@ -17,7 +17,8 @@ class LSUNBase(Dataset):
         self.data_paths = txt_file
         self.data_root = data_root
         with open(self.data_paths, "r") as f:
-            self.image_paths = f.read().splitlines()
+            # TODO (chongyiz): use a small subset
+            self.image_paths = f.read().splitlines()[:5000]
         self._length = len(self.image_paths)
         self.labels = {
             "relative_file_path_": [l for l in self.image_paths],

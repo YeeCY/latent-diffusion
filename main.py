@@ -535,7 +535,8 @@ if __name__ == "__main__":
         model = instantiate_from_config(config.model)
 
         # trainer and callbacks
-        trainer_kwargs = dict()
+        trainer_kwargs = dict(num_sanity_val_steps=0)
+        # trainer_kwargs = dict()
 
         # default logger configs
         default_logger_cfgs = {
