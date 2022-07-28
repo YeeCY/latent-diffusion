@@ -12,6 +12,7 @@ examples/
 rma*/
 .idea/
 
+logs
 data
 *.ckpt
 *.zip
